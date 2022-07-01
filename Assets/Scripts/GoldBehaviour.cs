@@ -18,11 +18,11 @@ public class GoldBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            ParticleSystem obj = GameManager.instance.goldTakeVfx;
-            GameManager.instance.gold++;
+            ParticleSystem obj = GameManager.Instance.goldTakeVfx;
+            GameManager.Instance.gold++;
             obj.transform.position = transform.position;
-               obj.gameObject.SetActive(true);
-            GameManager.instance.goldicon.SetActive(true);
+            obj.gameObject.SetActive(true);
+            GameManager.Instance.goldicon.SetActive(true);
             gameObject.SetActive(false);
         }
     }

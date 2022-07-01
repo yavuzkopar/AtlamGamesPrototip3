@@ -18,18 +18,13 @@ public class UITweens : MonoBehaviour
 
     private void OnEnable()
     {
-        // lerpe çevrilecek daha iyi öyle
         transform.DOScale(Vector3.one, 1);
         p = transform.localPosition;
-      /*  transform.DOLocalMove(hedef1.localPosition, 1).OnComplete(() => 
-        { transform.DOLocalMove(hedef.localPosition, 1).OnComplete(Deactive); });*/
-    /* Vector3 a = Vector3.Lerp(transform.localPosition,hedef1.localPosition,lerpvalue);
-        Vector3 b = Vector3.Lerp(hedef1.localPosition,hedef.localPosition,lerpvalue);
-        pos = Vector3.Lerp(a,b,lerpvalue);*/
+
     }
     void Deactive()
     {
-        GameManager.instance.UpdateGoldUI();
+        GameManager.Instance.UpdateGoldUI();
         gameObject.SetActive(false);
     }
     

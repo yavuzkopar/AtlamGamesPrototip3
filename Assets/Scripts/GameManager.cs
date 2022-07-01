@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    private static GameManager instance;
+    public static GameManager Instance { get { return instance; } }
     public UnityEvent finalMoment;
     public UnityEvent failMoment;
     public int gold;

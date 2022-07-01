@@ -35,7 +35,7 @@ public class Jumper : MonoBehaviour
     }
     void Jump(Transform player,Vector3 dir)
     {
-        GameManager.instance.astroidRotation.Move(transform.parent.position, 0.5f);
+        GameManager.Instance.astroidRotation.Move(transform.parent.position, 0.5f);
         player.DOJump(transform.parent.position + dir * 20, 10,1, 1.5f);
         transform.parent.DOShakePosition(.5f, 1);
         transform.parent.DOShakeScale(.5f, 1);

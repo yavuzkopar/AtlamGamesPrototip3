@@ -27,7 +27,7 @@ public class Mover : MonoBehaviour
         if (moveDir.magnitude > .9f)
             animator.SetBool("runn", true);
         if (transform.position.y <= -2)
-            GameManager.instance.failMoment?.Invoke();
+            GameManager.Instance.failMoment?.Invoke();
     }
     void Slide()
     {
@@ -74,11 +74,11 @@ public class Mover : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fire"))
         {
-            GameManager.instance.failMoment?.Invoke();
+            GameManager.Instance.failMoment?.Invoke();
         }
         else if (collision.gameObject.CompareTag("Final"))
         {
-            GameManager.instance.finalMoment?.Invoke();
+            GameManager.Instance.finalMoment?.Invoke();
                
             
         } 
